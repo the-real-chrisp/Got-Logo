@@ -3,10 +3,7 @@ const fs = require('fs');
 const { Circle, Rectangle, Triangle } = require('./lib/shapes');
 
 class Svg {
-    constructor() {
-        this.text = ''
-        this.shape = ""
-    }
+    constructor() {}
 
     render() {
         return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">${this.shape}${this.text}</svg>`
@@ -46,11 +43,19 @@ inquirer
         }
     ])
     .then((answers) => {
-        let svg = new Svg();
+        console.log(answers)
+        const svg = new Svg();
+        let shape;
         let svgString = ""
         svg.createText(answers.text, answers.textColor);
-        svg.createShape(answers.shape)
+        if (answers.shape === 'Circle') {
+            shape = new Circle(answers.shapeColor)
+        }
+        svg.createShape(shape)
         svgString = svg.render();
+
+        console.log(svg)
+        console.log(svgString)
 
         fs.writeFile('logo.svg', svgString, (err) =>
             err ? console.log(err) : console.log('Generated logo.svg!')
