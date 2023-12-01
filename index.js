@@ -10,7 +10,7 @@ class Svg {
     }
 
     createText(text, textColor) {
-        this.text = `<text x='150' y='125' font-size='60' text-anchor='middle' fill='${textColor}'>${text}</text>`
+        this.text = `<text x='100' y='120' font-size='60' text-anchor='middle' fill='${textColor}'>${text}</text>`
     }
 
     createShape(shape) {
@@ -50,6 +50,10 @@ inquirer
         svg.createText(answers.text, answers.textColor);
         if (answers.shape === 'Circle') {
             shape = new Circle(answers.shapeColor)
+        } else if (answers.shape === 'Triangle') {
+            shape = new Triangle(answers.shapeColor)
+        } else if (answers.shape === 'Rectangle') {
+            shape = new Rectangle(answers.shapeColor)
         }
         svg.createShape(shape)
         svgString = svg.render();
