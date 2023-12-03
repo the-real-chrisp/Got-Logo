@@ -10,7 +10,7 @@ class Svg {
     }
 
     createText(text, textColor) {
-        this.text = `<text x='100' y='120' font-size='60' text-anchor='middle' fill='${textColor}'>${text}</text>`
+        this.text = `<text x='50%' y='55%' font-size='60' text-anchor='middle' fill='${textColor}'>${text}</text>`
     }
 
     createShape(shape) {
