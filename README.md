@@ -22,7 +22,7 @@ Please refer to the installation intructions before running the application. Fir
 
 ![Example of Output](/assets/Screenshot%202023-12-03%20143243.png)
 
-[Video on using app](/assets/Untitled_%20Dec%203,%202023%202_07%20PM.webm)
+[Video on using app](https://drive.google.com/file/d/1Zf0YHWQ0MvbwWhxWUOYlpIZqFeJOyWDY/view?usp=sharing)
     
 ## How to Contribute
 
